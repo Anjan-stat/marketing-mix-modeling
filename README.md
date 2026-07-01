@@ -109,7 +109,7 @@ $$\boxed{y_t = \alpha + \boldsymbol{\beta}^\top \mathbf{s}\!\left(\mathbf{A}(\bo
 
 **Frequentist approach (Ridge regression):** We minimise:
 
-$$\hat{\boldsymbol{\beta}} = \underset{\boldsymbol{\beta} \geq 0}{\arg\min}$$
+$$\hat{\boldsymbol{\beta}} = \underset{\boldsymbol{\beta} \geq 0}{\arg\min} \{ \lVert \mathbf{y} - \mathbf{X}^{\star} \boldsymbol{\beta} \rVert_2^2 + \lambda_{\text{ridge}} \lVert \boldsymbol{\beta} \rVert_2^2 \}$$
 
 The adstock $\boldsymbol{\lambda}_m$ and saturation $K_m, n_m$ hyper-parameters are estimated via **grid search / L-BFGS-B** on held-out MAPE.
 
